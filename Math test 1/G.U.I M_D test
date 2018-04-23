@@ -1,0 +1,2240 @@
+                                                         start:
+                                                   GraphicsWindow.Show()
+                                                  
+              
+                                                   GraphicsWindow.FontName = ("Adobe song Std L")
+              button_m =                           Controls.AddButton ("Multiplication" , 250 , 90 ) 
+              button_d =                           Controls.AddButton ("Division"       , 250 , 199) 
+              Controls.SetSize ( button_m , 99 , 99) 
+              Controls.SetSize ( button_d , 99 , 99) 
+              
+              
+                                                   
+                                                    GraphicsWindow.FontSize = (25)
+                                                    GraphicsWindow.DrawText (200 , 10 , "Choose your subject") 
+                                                    
+                                
+
+                                                             GraphicsWindow.PenColor = ("steelblue") 
+                                                             lineyb = Shapes.AddRectangle ( 1 , 2000) 
+                                                             lineyt = Shapes.AddRectangle ( 1 , 2000) 
+                                                             liner  = Shapes.AddRectangle ( 2000 , 1) 
+                                                             linel  = Shapes.AddRectangle ( 2000  , 1) 
+                                                             
+                                GraphicsWindow.MouseMove = mousemovedmainmenu
+                                                  
+                                 Controls.ButtonClicked = buttonclicked_mu 
+              
+              
+                                            Sub buttonclicked_mu
+                
+                                            If     Controls.LastClickedButton = button_m     Then 
+                                                   Controls.ButtonClicked = buttonclicked_m 
+                                            ElseIf Controls.LastClickedButton = button_d     then 
+                                                   Controls.ButtonClicked = buttonclicked_d 
+                                            EndIf 
+                                                   
+                                            EndSub
+              
+              
+                 Sub buttonclicked_m 
+                 
+                 Sound.PlayClick()
+                 Controls.HideControl (button_m) 
+                 Controls.HideControl (button_d)  
+                 GraphicsWindow.Clear() 
+                
+                 
+                 button_mm1 =                           Controls.AddButton ("test 1" , 10 , 10  ) 
+                 button_mm2 =                           Controls.AddButton ("test 2" , 10 , 180 ) 
+                 button_mm3 =                           Controls.AddButton ("test 3" , 10 , 345 )
+               
+                 Controls.SetSize (button_mm1 , 90 , 90 ) 
+                 Controls.SetSize (button_mm2 , 90 , 90 ) 
+                 Controls.SetSize (button_mm3 , 90 , 90 )  
+                  
+                 
+                 GraphicsWindow.DrawText (110 , 10 ,  "Simple multiplication Sums") 
+                 GraphicsWindow.DrawText (110 , 180 , "moderate multiplication Sums") 
+                 GraphicsWindow.DrawText (110 , 345 , "Advanced Multiplication sums") 
+                 
+                Controls.ButtonClicked = buttonclicked_mm
+                EndSub 
+                
+                
+                
+                sub buttonclicked_mm  
+                If Controls.LastClickedButton = button_mm1 Then 
+                    Controls.ButtonClicked = buttonclicked_mm1 
+                ElseIf Controls.LastClickedButton = button_mm2 then 
+                    Controls.ButtonClicked = buttonclicked_mm2 
+                elseif Controls.LastClickedButton = button_mm3 then 
+                   Controls.ButtonClicked = buttonclicked_mm3 
+                EndIf 
+                endsub 
+              
+           
+                
+                
+                                                                 sub buttonclicked_mm1 
+                                                                 Sound.PlayClick()
+                                                                 GraphicsWindow.Clear() 
+                
+                                                button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                textbox_m1 = Controls.AddTextBox (250 , 280) 
+                                                Controls.SetSize (textbox_m1, 80  ,45) 
+                                                Controls.SetSize (button_m1 , 80 , 80) 
+                                                GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                GraphicsWindow.DrawText ( 270  , 30 , "3 x 6" ) 
+                
+                
+                                                   Controls.ButtonClicked = buttonclicked_m1_1 
+                                                                        EndSub 
+                
+               
+              
+            
+                        sub buttonclicked_m1_1 
+              
+              Sound.PlayClick()
+              answer_m =   Controls.GetTextBoxText (textbox_m1) 
+              array [1] = answer_m 
+                         If answer_m = "18" Then 
+                                score = 1 
+                                  EndIf 
+                                                            
+                                                            
+                     GraphicsWindow.Clear() 
+                
+      button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+      textbox_m1 = Controls.AddTextBox (250 , 280)   
+      Controls.SetSize (textbox_m1, 80  ,45) 
+      Controls.SetSize (button_m1 , 80 , 80) 
+      GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+      GraphicsWindow.DrawText ( 270  , 30 , "5 x 9" ) 
+                
+      Controls.ButtonClicked = buttonclicked_m1_2 
+                     EndSub               
+                                          
+                                          
+                                          
+                                                          sub buttonclicked_m1_2 
+                                                            
+                                                          Sound.PlayClick()  
+                                                          answer_m =   Controls.GetTextBoxText (textbox_m1)  
+                                                           array [2] = answer_m
+                                                           If answer_m = "45" Then 
+                                                              score = score + 1  
+                                                                   EndIf 
+             
+             
+                                                                 GraphicsWindow.Clear() 
+                                                   
+                                                 button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                 textbox_m1 = Controls.AddTextBox (250 , 280)   
+                                                 Controls.SetSize (textbox_m1, 80  ,45) 
+                                                 Controls.SetSize (button_m1 , 80 , 80) 
+                                                 GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                 GraphicsWindow.DrawText ( 270  , 30 , "8 x 3" ) 
+                
+                                                 Controls.ButtonClicked = buttonclicked_m1_3 
+                                                                        EndSub
+              
+              
+              
+              sub buttonclicked_m1_3 
+           
+Sound.PlayClick()           
+answer_m =   Controls.GetTextBoxText (textbox_m1)
+              array [3] = answer_m   
+              If answer_m = "24" Then 
+                  score = score + 1  
+                       EndIf  
+              
+              
+          GraphicsWindow.Clear() 
+                
+          button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+          textbox_m1 = Controls.AddTextBox (250 , 280)   
+          Controls.SetSize (textbox_m1, 80  ,45) 
+          Controls.SetSize (button_m1 , 80 , 80) 
+          GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+          GraphicsWindow.DrawText ( 270  , 30 , "9 x 4" ) 
+                
+             
+             Controls.ButtonClicked = buttonclicked_m1_4 
+                               EndSub 
+             
+           
+         
+                                                                            Sub buttonclicked_m1_4 
+                                                                              
+                                                               Sound.PlayClick()               
+                                                               answer_m =   Controls.GetTextBoxText (textbox_m1)
+                                                                          array [4] = answer_m
+                                                                          If answer_m = "36" Then 
+                                                                               score = score + 1  
+                                                                                    EndIf
+                 
+                                                                          GraphicsWindow.Clear() 
+                
+                                                                   button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                                   textbox_m1 = Controls.AddTextBox (250 , 280)   
+                                                                   Controls.SetSize (textbox_m1, 80  ,45) 
+                                                                   Controls.SetSize (button_m1 , 80 , 80) 
+                                                                   GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                                   GraphicsWindow.DrawText ( 270  , 30 , "7 x 4" ) 
+             
+                                                                   Controls.ButtonClicked = buttonclicked_m1_5 
+                                                                                     EndSub 
+             
+             
+         
+         Sub buttonclicked_m1_5
+           
+         Sound.PlayClick()      
+         answer_m =   Controls.GetTextBoxText (textbox_m1) 
+         array [5] = answer_m    
+              If answer_m = "28" Then 
+                 score = score + 1  
+                      EndIf
+             
+            GraphicsWindow.Clear() 
+                
+   button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+   textbox_m1 = Controls.AddTextBox (250 , 280)   
+   Controls.SetSize (textbox_m1, 80  ,45) 
+   Controls.SetSize (button_m1 , 80 , 80) 
+   GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+   GraphicsWindow.DrawText ( 270  , 30 , "9 x 6" ) 
+                
+    Controls.ButtonClicked = buttonclicked_m1_6
+                    EndSub 
+                
+                
+                
+                                                                                 sub buttonclicked_m1_6
+                                                                                   
+                                                                   Sound.PlayClick()                
+                                                                   answer_m =   Controls.GetTextBoxText (textbox_m1) 
+                                                                   array [6] = answer_m  
+                                                                                If answer_m = "54" Then 
+                                                                                   score = score + 1  
+                                                                                        EndIf
+                 
+                                                                                 GraphicsWindow.Clear()
+                 
+                                                                  button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                                  textbox_m1 = Controls.AddTextBox (250 , 280)   
+                                                                  Controls.SetSize (textbox_m1, 80  ,45) 
+                                                                  Controls.SetSize (button_m1 , 80 , 80) 
+                                                                  GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                                  GraphicsWindow.DrawText ( 270  , 30 , "12 x 12")  
+                
+                                                                  Controls.ButtonClicked = buttonclicked_m1_7
+                                                                                      endsub 
+                                                                                      
+                                                                                      
+                        sub buttonclicked_m1_7 
+
+                 Sound.PlayClick()
+                 answer_m =   Controls.GetTextBoxText (textbox_m1)   
+                 array [7] = answer_m 
+                            If answer_m = "144" Then 
+                             score = score + 1  
+                                   EndIf
+                 
+                           GraphicsWindow.Clear()  
+                   
+                button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                textbox_m1 = Controls.AddTextBox (250 , 280)   
+                Controls.SetSize (textbox_m1, 80  ,45) 
+                Controls.SetSize (button_m1 , 80 , 80) 
+                GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                GraphicsWindow.DrawText ( 270  , 30 , "4 x 5") 
+                
+                
+                Controls.ButtonClicked = buttonclicked_m1_8 
+                                   EndSub 
+                
+                
+                
+                                                                                               Sub buttonclicked_m1_8
+                 
+                                                                                 Sound.PlayClick()
+                                                                                 answer_m =   Controls.GetTextBoxText (textbox_m1)   
+                                                                                 array [8] = answer_m
+                                                                                               If answer_m = "20" Then 
+                                                                                                 score = score + 1  
+                                                                                                      EndIf 
+                 
+                                                                                               GraphicsWindow.Clear () 
+                 
+                                                                     button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                                     textbox_m1 = Controls.AddTextBox (250 , 280)   
+                                                                     Controls.SetSize (textbox_m1, 80  ,45) 
+                                                                     Controls.SetSize (button_m1 , 80 , 80) 
+                                                                     GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                                     GraphicsWindow.DrawText ( 270  , 30 , "8 x 6") 
+                
+                                                                                       Controls.ButtonClicked = buttonclicked_m1_9
+                                                                                                        EndSub
+               
+                        Sub buttonclicked_m1_9 
+                          
+                 Sound.PlayClick()         
+                 answer_m =   Controls.GetTextBoxText (textbox_m1)   
+                 array [9] = answer_m 
+                       If answer_m = "48" Then 
+                          score = score + 1  
+                              EndIf
+                 
+                     GraphicsWindow.Clear () 
+                 
+                  button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                  textbox_m1 = Controls.AddTextBox (250 , 280)   
+                  Controls.SetSize (textbox_m1, 80  ,45) 
+                  Controls.SetSize (button_m1 , 80 , 80) 
+                  GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                  GraphicsWindow.DrawText ( 270  , 30 , "8 x 12")
+                
+                  Controls.ButtonClicked = buttonclicked_m1_10 
+                                    EndSub 
+                                    
+                                    
+                                    
+                                                                             
+                                                                                  
+                                                                                  
+                                                                                                        sub buttonclicked_m1_10 
+         
+                                                                                                         Sound.PlayClick()     
+                                                                                  answer_m =   Controls.GetTextBoxText (textbox_m1)   
+                                                                                  array [10] = answer_m
+                                                                                                      If answer_m = "96" Then 
+                                                                                                          score = score + 1  
+                                                                                                                 EndIf
+           percentage = score / 10 * 100  
+                     
+                if  percentage > 49  Then  
+           GraphicsWindow.Clear() 
+           
+           GraphicsWindow.DrawText (180 , 10 , "CONGRADULATIONS!")
+           GraphicsWindow.DrawText (230 , 30 , "Your percentage") 
+           GraphicsWindow.DrawText (240 , 50 , percentage) 
+           
+           GraphicsWindow.DrawText (10 , 140 , array [1])
+           GraphicsWindow.DrawText (10 , 160 , array [2])
+           GraphicsWindow.DrawText (10 , 180 , array [3]) 
+           GraphicsWindow.DrawText (10 , 200 , array [4]) 
+           GraphicsWindow.DrawText (10 , 220 , array [5]) 
+           GraphicsWindow.DrawText (10 , 240 , array [6]) 
+           GraphicsWindow.DrawText (10 , 260 , array [7]) 
+           GraphicsWindow.DrawText (10 , 280 , array [8]) 
+           GraphicsWindow.DrawText (10 , 300 , array [9]) 
+           GraphicsWindow.DrawText (10 , 320 , array [10]) 
+           GraphicsWindow.DrawText (10 , 100 , "Your Answers:") 
+           
+           GraphicsWindow.DrawText (200 , 100 , "The Questions:")
+           GraphicsWindow.DrawText (200 , 140 , "3 x 6") 
+           GraphicsWindow.DrawText (200 , 160 , "5 x 9") 
+           GraphicsWindow.DrawText (200 , 180 , "8 x 3") 
+           GraphicsWindow.DrawText (200 , 200 , "9 x 4") 
+           GraphicsWindow.DrawText (200 , 220, "7 x 4") 
+           GraphicsWindow.DrawText (200 , 240 , "9 x 6") 
+           GraphicsWindow.DrawText (200 , 260 , "12 x 12") 
+           GraphicsWindow.DrawText (200 , 280 , "4 x 5") 
+           GraphicsWindow.DrawText (200 , 300 , "8 x 6") 
+           GraphicsWindow.DrawText (200  ,320 , "8 x 12") 
+           
+           GraphicsWindow.DrawText (380 , 100 , "Memorandum Answers") 
+           GraphicsWindow.DrawText (380 , 140 , "18")      
+           GraphicsWindow.DrawText (380 , 160 , "45") 
+           GraphicsWindow.DrawText (380 , 180 , "24") 
+           GraphicsWindow.DrawText (380 , 200 , "36") 
+           GraphicsWindow.DrawText (380 , 220 , "28") 
+           GraphicsWindow.DrawText (380 , 240 , "54") 
+           GraphicsWindow.DrawText (380 , 260 , "144") 
+           GraphicsWindow.DrawText (380 , 280 , "20") 
+           GraphicsWindow.DrawText (380 , 300 , "48") 
+           GraphicsWindow.DrawText (380 , 320 , "96")
+           
+           Controls.AddButton ( "Done" , 550 , 370)
+           Controls.ButtonClicked = exitbutton2
+          
+            
+               ElseIf percentage < 49 then 
+                 GraphicsWindow.Clear()
+                 
+           GraphicsWindow.DrawText (180 , 10 , "OoooOps!  ")
+           GraphicsWindow.DrawText (230 , 30 , "Your percentage") 
+           GraphicsWindow.DrawText (240 , 50 , percentage)
+           
+           GraphicsWindow.DrawText (10 , 140 , array [1])
+           GraphicsWindow.DrawText (10 , 160 , array [2])
+           GraphicsWindow.DrawText (10 , 180 , array [3]) 
+           GraphicsWindow.DrawText (10 , 200 , array [4]) 
+           GraphicsWindow.DrawText (10 , 220 , array [5]) 
+           GraphicsWindow.DrawText (10 , 240 , array [6]) 
+           GraphicsWindow.DrawText (10 , 260 , array [7]) 
+           GraphicsWindow.DrawText (10 , 280 , array [8]) 
+           GraphicsWindow.DrawText (10 , 300 , array [9]) 
+           GraphicsWindow.DrawText (10 , 320 , array [10]) 
+           GraphicsWindow.DrawText (10 , 100 , "Your Answers:") 
+           
+           GraphicsWindow.DrawText (200 , 100 , "The Questions:")
+           GraphicsWindow.DrawText (200 , 140 , "3 x 6") 
+           GraphicsWindow.DrawText (200 , 160 , "5 x 9") 
+           GraphicsWindow.DrawText (200 , 180 , "8 x 3") 
+           GraphicsWindow.DrawText (200 , 200 , "9 x 4") 
+           GraphicsWindow.DrawText (200 , 220,  "7 x 4") 
+           GraphicsWindow.DrawText (200 , 240 , "9 x 6") 
+           GraphicsWindow.DrawText (200 , 260 , "12 x 12") 
+           GraphicsWindow.DrawText (200 , 280 , "4 x 5") 
+           GraphicsWindow.DrawText (200 , 300 , "8 x 6") 
+           GraphicsWindow.DrawText (200  ,320 , "8 x 12") 
+           
+           GraphicsWindow.DrawText (380 , 100 , "Memorandum Answers:") 
+           GraphicsWindow.DrawText (380 , 140 , "18")      
+           GraphicsWindow.DrawText (380 , 160 , "45") 
+           GraphicsWindow.DrawText (380 , 180 , "24") 
+           GraphicsWindow.DrawText (380 , 200 , "36") 
+           GraphicsWindow.DrawText (380 , 220 , "28") 
+           GraphicsWindow.DrawText (380 , 240 , "54") 
+           GraphicsWindow.DrawText (380 , 260 , "144") 
+           GraphicsWindow.DrawText (380 , 280 , "20") 
+           GraphicsWindow.DrawText (380 , 300 , "48") 
+           GraphicsWindow.DrawText (380 , 320 , "96")
+          
+          Controls.AddButton ( "Done" , 550 , 370)
+          Controls.ButtonClicked = exitbutton 
+                     EndIf 
+                     endsub 
+             
+             
+             Sub exitbutton 
+               Sound.PlayClickAndWait()
+               Program.End() 
+             EndSub 
+             
+             Sub exitbutton2 
+               Sound.PlayClickAndWait()
+               Program.End() 
+             EndSub
+             
+             
+                
+                Sub buttonclicked_mm2 
+                  
+                  Sound.PlayClick()
+                                                                 GraphicsWindow.Clear() 
+                
+                                                button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                textbox_m1 = Controls.AddTextBox (250 , 280) 
+                                                Controls.SetSize (textbox_m1, 80  ,45) 
+                                                Controls.SetSize (button_m1 , 80 , 80) 
+                                                GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                GraphicsWindow.DrawText ( 270  , 30 , "34 x 44" ) 
+                    workingoutblock =           Controls.AddMultiLineTextBox (470 , 0) 
+                                                Controls.SetSize ( workingoutblock , 150 , 440)  
+                
+                                                   Controls.ButtonClicked = buttonclicked_m2_1 
+                                                                        EndSub 
+                
+               
+              
+            
+                        sub buttonclicked_m2_1 
+              
+              Sound.PlayClick()
+              answer_m =   Controls.GetTextBoxText (textbox_m1) 
+              array [1] = answer_m 
+                         If answer_m = "1496" Then 
+                                score = 1 
+                                  EndIf 
+                                                            
+                                                            
+                     GraphicsWindow.Clear() 
+                
+      button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+      textbox_m1 = Controls.AddTextBox (250 , 280)   
+      Controls.SetSize (textbox_m1, 80  ,45) 
+      Controls.SetSize (button_m1 , 80 , 80) 
+      GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+      GraphicsWindow.DrawText ( 270  , 30 , "52 x 22" ) 
+      workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+      Controls.SetSize ( workingoutblock , 150 , 440)
+                
+      Controls.ButtonClicked = buttonclicked_m2_2 
+                     EndSub               
+                                          
+                                          
+                                          
+                                                          sub buttonclicked_m2_2 
+                                                            
+                                                          Sound.PlayClick()  
+                                                          answer_m =   Controls.GetTextBoxText (textbox_m1)  
+                                                           array [2] = answer_m
+                                                           If answer_m = "1144" Then 
+                                                              score = score + 1  
+                                                                   EndIf 
+             
+             
+                                                                 GraphicsWindow.Clear() 
+                                                   
+                                                 button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                 textbox_m1 = Controls.AddTextBox (250 , 280)   
+                                                 Controls.SetSize (textbox_m1, 80  ,45) 
+                                                 Controls.SetSize (button_m1 , 80 , 80) 
+                                                 GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                 GraphicsWindow.DrawText ( 270  , 30 , "38 x 23" ) 
+                                                 workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                                                 Controls.SetSize ( workingoutblock , 150 , 440)
+                                                 
+                                                 Controls.ButtonClicked = buttonclicked_m2_3 
+                                                                        EndSub
+              
+              
+              
+              sub buttonclicked_m2_3 
+           
+Sound.PlayClick()           
+answer_m =   Controls.GetTextBoxText (textbox_m1)
+              array [3] = answer_m   
+              If answer_m = "874" Then 
+                  score = score + 1  
+                       EndIf  
+              
+              
+          GraphicsWindow.Clear() 
+                
+          button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+          textbox_m1 = Controls.AddTextBox (250 , 280)   
+          Controls.SetSize (textbox_m1, 80  ,45) 
+          Controls.SetSize (button_m1 , 80 , 80) 
+          GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+          GraphicsWindow.DrawText ( 270  , 30 , "73 x 43 " ) 
+          workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+          Controls.SetSize ( workingoutblock , 150 , 440)      
+             
+             Controls.ButtonClicked = buttonclicked_m2_4 
+                               EndSub 
+             
+           
+         
+                                                                            Sub buttonclicked_m2_4 
+                                                                              
+                                                               Sound.PlayClick()               
+                                                               answer_m =   Controls.GetTextBoxText (textbox_m1)
+                                                                          array [4] = answer_m
+                                                                          If answer_m = "3139" Then 
+                                                                               score = score + 1  
+                                                                                    EndIf
+                 
+                                                                          GraphicsWindow.Clear() 
+                
+                                                                   button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                                   textbox_m1 = Controls.AddTextBox (250 , 280)   
+                                                                   Controls.SetSize (textbox_m1, 80  ,45) 
+                                                                   Controls.SetSize (button_m1 , 80 , 80) 
+                                                                   GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                                   GraphicsWindow.DrawText ( 270  , 30 , "82 x 64" ) 
+                                                                   workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                                                                   Controls.SetSize ( workingoutblock , 150 , 440)
+                                                                   
+                                                                   Controls.ButtonClicked = buttonclicked_m2_5 
+                                                                                     EndSub 
+             
+             
+         
+         Sub buttonclicked_m2_5
+           
+         Sound.PlayClick()      
+         answer_m =   Controls.GetTextBoxText (textbox_m1) 
+         array [5] = answer_m    
+              If answer_m = "5248" Then 
+                 score = score + 1  
+                      EndIf
+             
+            GraphicsWindow.Clear() 
+                
+   button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+   textbox_m1 = Controls.AddTextBox (250 , 280)   
+   Controls.SetSize (textbox_m1, 80  ,45) 
+   Controls.SetSize (button_m1 , 80 , 80) 
+   GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+   GraphicsWindow.DrawText ( 270  , 30 , "35 x 79" ) 
+   workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+   Controls.SetSize ( workingoutblock , 150 , 440)
+
+    Controls.ButtonClicked = buttonclicked_m2_6
+                    EndSub 
+                
+                
+                
+                                                                                 sub buttonclicked_m2_6
+                                                                                   
+                                                                   Sound.PlayClick()                
+                                                                   answer_m =   Controls.GetTextBoxText (textbox_m1) 
+                                                                   array [6] = answer_m  
+                                                                                If answer_m = "2765" Then 
+                                                                                   score = score + 1  
+                                                                                        EndIf
+                 
+                                                                                 GraphicsWindow.Clear()
+                 
+                                                                  button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                                  textbox_m1 = Controls.AddTextBox (250 , 280)   
+                                                                  Controls.SetSize (textbox_m1, 80  ,45) 
+                                                                  Controls.SetSize (button_m1 , 80 , 80) 
+                                                                  GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                                  GraphicsWindow.DrawText ( 270  , 30 , "15 x 65")  
+                                                                  workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                                                                  Controls.SetSize ( workingoutblock , 150 , 440)
+                                                                  
+                                                                 Controls.ButtonClicked = buttonclicked_m2_7
+                                                                                      endsub 
+                                                                                      
+                                                                                      
+                        sub buttonclicked_m2_7 
+
+                 Sound.PlayClick()
+                 answer_m =   Controls.GetTextBoxText (textbox_m1)   
+                 array [7] = answer_m 
+                            If answer_m = "975" Then 
+                             score = score + 1  
+                                   EndIf
+                 
+                           GraphicsWindow.Clear()  
+                   
+                button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                textbox_m1 = Controls.AddTextBox (250 , 280)   
+                Controls.SetSize (textbox_m1, 80  ,45) 
+                Controls.SetSize (button_m1 , 80 , 80) 
+                GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                GraphicsWindow.DrawText ( 270  , 30 , "11 x 43") 
+                workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                Controls.SetSize ( workingoutblock , 150 , 440)
+                
+                
+                Controls.ButtonClicked = buttonclicked_m2_8 
+                                   EndSub 
+                
+                
+                
+                                                                                               Sub buttonclicked_m2_8
+                 
+                                                                                 Sound.PlayClick()
+                                                                                 answer_m =   Controls.GetTextBoxText (textbox_m1)   
+                                                                                 array [8] = answer_m
+                                                                                               If answer_m = "473" Then 
+                                                                                                 score = score + 1  
+                                                                                                      EndIf 
+                 
+                                                                                               GraphicsWindow.Clear () 
+                 
+                                                                     button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                                     textbox_m1 = Controls.AddTextBox (250 , 280)   
+                                                                     Controls.SetSize (textbox_m1, 80  ,45) 
+                                                                     Controls.SetSize (button_m1 , 80 , 80) 
+                                                                     GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                                     GraphicsWindow.DrawText ( 270  , 30 , "67 x 33") 
+                                                                     workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                                                                     Controls.SetSize ( workingoutblock , 150 , 440)
+                                                                                       Controls.ButtonClicked = buttonclicked_m2_9
+                                                                                                        EndSub
+               
+                        Sub buttonclicked_m2_9 
+                          
+                 Sound.PlayClick()         
+                 answer_m =   Controls.GetTextBoxText (textbox_m1)   
+                 array [9] = answer_m 
+                       If answer_m = "2211" Then 
+                          score = score + 1  
+                              EndIf
+                 
+                     GraphicsWindow.Clear () 
+                 
+                  button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                  textbox_m1 = Controls.AddTextBox (250 , 280)   
+                  Controls.SetSize (textbox_m1, 80  ,45) 
+                  Controls.SetSize (button_m1 , 80 , 80) 
+                  GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                  GraphicsWindow.DrawText ( 270  , 30 , "89 x 75")
+                  workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                  Controls.SetSize ( workingoutblock , 150 , 440)
+                  
+                  Controls.ButtonClicked = buttonclicked_m2_10 
+                  
+                                    EndSub 
+                                    
+                        sub buttonclicked_m2_10 
+         
+                                                                                                         Sound.PlayClick()     
+                                                                                  answer_m =   Controls.GetTextBoxText (textbox_m1)   
+                                                                                  array [10] = answer_m
+                                                                                                      If answer_m = "6675" Then 
+                                                                                                          score = score + 1  
+                                                                                                                 EndIf
+           percentage = score / 10 * 100  
+                     
+                if  percentage > 49  Then  
+           GraphicsWindow.Clear() 
+           
+           GraphicsWindow.DrawText (180 , 10 , "CONGRADULATIONS!")
+           GraphicsWindow.DrawText (230 , 30 , "Your percentage") 
+           GraphicsWindow.DrawText (240 , 50 , percentage) 
+           
+           GraphicsWindow.DrawText (10 , 140 , array [1])
+           GraphicsWindow.DrawText (10 , 160 , array [2])
+           GraphicsWindow.DrawText (10 , 180 , array [3]) 
+           GraphicsWindow.DrawText (10 , 200 , array [4]) 
+           GraphicsWindow.DrawText (10 , 220 , array [5]) 
+           GraphicsWindow.DrawText (10 , 240 , array [6]) 
+           GraphicsWindow.DrawText (10 , 260 , array [7]) 
+           GraphicsWindow.DrawText (10 , 280 , array [8]) 
+           GraphicsWindow.DrawText (10 , 300 , array [9]) 
+           GraphicsWindow.DrawText (10 , 320 , array [10]) 
+           GraphicsWindow.DrawText (10 , 100 , "Your Answers:") 
+           
+           GraphicsWindow.DrawText (200 , 100 , "The Questions:")
+           GraphicsWindow.DrawText (200 , 140 , "34 x 44") 
+           GraphicsWindow.DrawText (200 , 160 , "52 x 22") 
+           GraphicsWindow.DrawText (200 , 180 , "38 x 23") 
+           GraphicsWindow.DrawText (200 , 200 , "73 x 43") 
+           GraphicsWindow.DrawText (200 , 220,  "82 x 64") 
+           GraphicsWindow.DrawText (200 , 240 , "35 x 79") 
+           GraphicsWindow.DrawText (200 , 260 , "15 x 65") 
+           GraphicsWindow.DrawText (200 , 280 , "11 x 43") 
+           GraphicsWindow.DrawText (200 , 300 , "67 x 33") 
+           GraphicsWindow.DrawText (200  ,320 , "89 x 75") 
+           
+           GraphicsWindow.DrawText (380 , 100 , "Memorandum Answers:") 
+           GraphicsWindow.DrawText (380 , 140 , "1496")      
+           GraphicsWindow.DrawText (380 , 160 , "1144") 
+           GraphicsWindow.DrawText (380 , 180 , "874") 
+           GraphicsWindow.DrawText (380 , 200 , "3139") 
+           GraphicsWindow.DrawText (380 , 220 , "5248") 
+           GraphicsWindow.DrawText (380 , 240 , "2765") 
+           GraphicsWindow.DrawText (380 , 260 , "975") 
+           GraphicsWindow.DrawText (380 , 280 , "473") 
+           GraphicsWindow.DrawText (380 , 300 , "2211") 
+           GraphicsWindow.DrawText (380 , 320 , "6675")
+           
+           Controls.AddButton ( "Done" , 550 , 370)
+           Controls.ButtonClicked = exitbuttonm2
+          
+            
+               ElseIf percentage < 49 then 
+                 GraphicsWindow.Clear()
+                 
+           GraphicsWindow.DrawText (180 , 10 , "OoooOps!  ")
+           GraphicsWindow.DrawText (230 , 30 , "Your percentage") 
+           GraphicsWindow.DrawText (240 , 50 , percentage)
+           
+           GraphicsWindow.DrawText (10 , 140 , array [1])
+           GraphicsWindow.DrawText (10 , 160 , array [2])
+           GraphicsWindow.DrawText (10 , 180 , array [3]) 
+           GraphicsWindow.DrawText (10 , 200 , array [4]) 
+           GraphicsWindow.DrawText (10 , 220 , array [5]) 
+           GraphicsWindow.DrawText (10 , 240 , array [6]) 
+           GraphicsWindow.DrawText (10 , 260 , array [7]) 
+           GraphicsWindow.DrawText (10 , 280 , array [8]) 
+           GraphicsWindow.DrawText (10 , 300 , array [9]) 
+           GraphicsWindow.DrawText (10 , 320 , array [10]) 
+           GraphicsWindow.DrawText (10 , 100 , "Your Answers:") 
+           
+           GraphicsWindow.DrawText (200 , 100 , "The Questions:")
+           GraphicsWindow.DrawText (200 , 140 , "34 x 44") 
+           GraphicsWindow.DrawText (200 , 160 , "52 x 22") 
+           GraphicsWindow.DrawText (200 , 180 , "38 x 23") 
+           GraphicsWindow.DrawText (200 , 200 , "73 x 43") 
+           GraphicsWindow.DrawText (200 , 220,  "82 x 64") 
+           GraphicsWindow.DrawText (200 , 240 , "35 x 79") 
+           GraphicsWindow.DrawText (200 , 260 , "15 x 65") 
+           GraphicsWindow.DrawText (200 , 280 , "11 x 43") 
+           GraphicsWindow.DrawText (200 , 300 , "67 x 33") 
+           GraphicsWindow.DrawText (200  ,320 , "89 x 75") 
+           
+           GraphicsWindow.DrawText (380 , 100 , "Memorandum Answers:") 
+           GraphicsWindow.DrawText (380 , 140 , "1496")      
+           GraphicsWindow.DrawText (380 , 160 , "1144") 
+           GraphicsWindow.DrawText (380 , 180 , "874") 
+           GraphicsWindow.DrawText (380 , 200 , "3139") 
+           GraphicsWindow.DrawText (380 , 220 , "5248") 
+           GraphicsWindow.DrawText (380 , 240 , "2765") 
+           GraphicsWindow.DrawText (380 , 260 , "975") 
+           GraphicsWindow.DrawText (380 , 280 , "473") 
+           GraphicsWindow.DrawText (380 , 300 , "2211") 
+           GraphicsWindow.DrawText (380 , 320 , "6675")
+          
+          Controls.AddButton ( "Done" , 550 , 370)
+          Controls.ButtonClicked = exitbuttonm 
+                     EndIf 
+                     endsub             
+             
+     
+            Sub exitbuttonm 
+               Sound.PlayClickAndWait()
+               Program.End() 
+             EndSub 
+             
+             Sub exitbuttonm2 
+               Sound.PlayClickAndWait()
+               Program.End() 
+             EndSub     
+          
+       
+        
+            Sub buttonclicked_mm3 
+         
+         m3_1  = "657 x 621" 
+         m3_2  = "562 x 721 "
+         m3_3  = "521 x 301 "
+         m3_4  = "253 x 915 "
+         m3_5  = "623 x 254 "
+         m3_6  = "523 x 623 "
+         m3_7  = "721 x 963 "
+         m3_8  = "201 x 103 "
+         m3_9  = "369 x 147 "
+         m3_10 = "189 x 999"
+         
+         m3_1a  = 657 * 621
+         m3_2a  = 562 * 721 
+         m3_3a  = 521 * 301 
+         m3_4a  = 253 * 915 
+         m3_5a  = 623 * 254 
+         m3_6a  = 523 * 623 
+         m3_7a  = 721 * 963 
+         m3_8a  = 201 * 103 
+         m3_9a  = 369 * 147 
+         m3_10a = 189 * 999
+                    
+                 Sound.PlayClick()
+                                                                 GraphicsWindow.Clear() 
+                
+                                                button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                textbox_m1 = Controls.AddTextBox (250 , 280) 
+                                                Controls.SetSize (textbox_m1, 80  ,45) 
+                                                Controls.SetSize (button_m1 , 80 , 80) 
+                                                GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                GraphicsWindow.DrawText ( 270  , 30 , m3_1 ) 
+                    workingoutblock =           Controls.AddMultiLineTextBox (470 , 0) 
+                                                Controls.SetSize ( workingoutblock , 150 , 440)  
+                
+                                                   Controls.ButtonClicked = buttonclicked_m3_1 
+                                                                        EndSub 
+                
+               
+              
+            
+                        sub buttonclicked_m3_1 
+              
+              Sound.PlayClick()
+              answer_m =   Controls.GetTextBoxText (textbox_m1) 
+              array [1] = answer_m 
+                         If answer_m = m3_1a Then 
+                                score = 1 
+                                  EndIf 
+                                                            
+                                                            
+                     GraphicsWindow.Clear() 
+                
+      button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+      textbox_m1 = Controls.AddTextBox (250 , 280)   
+      Controls.SetSize (textbox_m1, 80  ,45) 
+      Controls.SetSize (button_m1 , 80 , 80) 
+      GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+      GraphicsWindow.DrawText ( 270  , 30 , m3_2 ) 
+      workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+      Controls.SetSize ( workingoutblock , 150 , 440)
+                
+      Controls.ButtonClicked = buttonclicked_m3_2 
+                     EndSub               
+                                          
+                                          
+                                          
+                                                          sub buttonclicked_m3_2 
+                                                            
+                                                          Sound.PlayClick()  
+                                                          answer_m =   Controls.GetTextBoxText (textbox_m1)  
+                                                           array [2] = answer_m
+                                                           If answer_m = m3_2a Then 
+                                                              score = score + 1  
+                                                                   EndIf 
+             
+             
+                                                                 GraphicsWindow.Clear() 
+                                                   
+                                                 button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                 textbox_m1 = Controls.AddTextBox (250 , 280)   
+                                                 Controls.SetSize (textbox_m1, 80  ,45) 
+                                                 Controls.SetSize (button_m1 , 80 , 80) 
+                                                 GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                 GraphicsWindow.DrawText ( 270  , 30 , m3_3 ) 
+                                                 workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                                                 Controls.SetSize ( workingoutblock , 150 , 440)
+                                                 
+                                                 Controls.ButtonClicked = buttonclicked_m3_3 
+                                                                        EndSub
+              
+              
+              
+              sub buttonclicked_m3_3 
+           
+Sound.PlayClick()           
+answer_m =   Controls.GetTextBoxText (textbox_m1)
+              array [3] = answer_m   
+              If answer_m = m3_3a Then 
+                  score = score + 1  
+                       EndIf  
+              
+              
+          GraphicsWindow.Clear() 
+                
+          button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+          textbox_m1 = Controls.AddTextBox (250 , 280)   
+          Controls.SetSize (textbox_m1, 80  ,45) 
+          Controls.SetSize (button_m1 , 80 , 80) 
+          GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+          GraphicsWindow.DrawText ( 270  , 30 , m3_4 ) 
+          workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+          Controls.SetSize ( workingoutblock , 150 , 440)      
+             
+             Controls.ButtonClicked = buttonclicked_m3_4 
+                               EndSub 
+             
+           
+         
+                                                                            Sub buttonclicked_m3_4 
+                                                                              
+                                                               Sound.PlayClick()               
+                                                               answer_m =   Controls.GetTextBoxText (textbox_m1)
+                                                                          array [4] = answer_m
+                                                                          If answer_m = m3_4a Then 
+                                                                               score = score + 1  
+                                                                                    EndIf
+                 
+                                                                          GraphicsWindow.Clear() 
+                
+                                                                   button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                                   textbox_m1 = Controls.AddTextBox (250 , 280)   
+                                                                   Controls.SetSize (textbox_m1, 80  ,45) 
+                                                                   Controls.SetSize (button_m1 , 80 , 80) 
+                                                                   GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                                   GraphicsWindow.DrawText ( 270  , 30 , m3_5 ) 
+                                                                   workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                                                                   Controls.SetSize ( workingoutblock , 150 , 440)
+                                                                   
+                                                                   Controls.ButtonClicked = buttonclicked_m3_5 
+                                                                                     EndSub 
+             
+             
+         
+         Sub buttonclicked_m3_5
+           
+         Sound.PlayClick()      
+         answer_m =   Controls.GetTextBoxText (textbox_m1) 
+         array [5] = answer_m    
+              If answer_m = m3_5a Then 
+                 score = score + 1  
+                      EndIf
+             
+            GraphicsWindow.Clear() 
+                
+   button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+   textbox_m1 = Controls.AddTextBox (250 , 280)   
+   Controls.SetSize (textbox_m1, 80  ,45) 
+   Controls.SetSize (button_m1 , 80 , 80) 
+   GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+   GraphicsWindow.DrawText ( 270  , 30 , m3_6 ) 
+   workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+   Controls.SetSize ( workingoutblock , 150 , 440)
+
+    Controls.ButtonClicked = buttonclicked_m3_6
+                    EndSub 
+                
+                
+                
+                                                                                 sub buttonclicked_m3_6
+                                                                                   
+                                                                   Sound.PlayClick()                
+                                                                   answer_m =   Controls.GetTextBoxText (textbox_m1) 
+                                                                   array [6] = answer_m  
+                                                                                If answer_m = m3_6a Then 
+                                                                                   score = score + 1  
+                                                                                        EndIf
+                 
+                                                                                 GraphicsWindow.Clear()
+                 
+                                                                  button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                                  textbox_m1 = Controls.AddTextBox (250 , 280)   
+                                                                  Controls.SetSize (textbox_m1, 80  ,45) 
+                                                                  Controls.SetSize (button_m1 , 80 , 80) 
+                                                                  GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                                  GraphicsWindow.DrawText ( 270  , 30 , m3_7)  
+                                                                  workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                                                                  Controls.SetSize ( workingoutblock , 150 , 440)
+                                                                  
+                                                                 Controls.ButtonClicked = buttonclicked_m3_7
+                                                                                      endsub 
+                                                                                      
+                                                                                      
+                        sub buttonclicked_m3_7 
+
+                 Sound.PlayClick()
+                 answer_m =   Controls.GetTextBoxText (textbox_m1)   
+                 array [7] = answer_m 
+                            If answer_m = m3_7a Then 
+                             score = score + 1  
+                                   EndIf
+                 
+                           GraphicsWindow.Clear()  
+                   
+                button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                textbox_m1 = Controls.AddTextBox (250 , 280)   
+                Controls.SetSize (textbox_m1, 80  ,45) 
+                Controls.SetSize (button_m1 , 80 , 80) 
+                GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                GraphicsWindow.DrawText ( 270  , 30 , m3_8) 
+                workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                Controls.SetSize ( workingoutblock , 150 , 440)
+                
+                
+                Controls.ButtonClicked = buttonclicked_m3_8 
+                                   EndSub 
+                
+                
+                
+                                                                                               Sub buttonclicked_m3_8
+                 
+                                                                                 Sound.PlayClick()
+                                                                                 answer_m =   Controls.GetTextBoxText (textbox_m1)   
+                                                                                 array [8] = answer_m
+                                                                                               If answer_m = m3_8a Then 
+                                                                                                 score = score + 1  
+                                                                                                      EndIf 
+                 
+                                                                                               GraphicsWindow.Clear () 
+                 
+                                                                     button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                                     textbox_m1 = Controls.AddTextBox (250 , 280)   
+                                                                     Controls.SetSize (textbox_m1, 80  ,45) 
+                                                                     Controls.SetSize (button_m1 , 80 , 80) 
+                                                                     GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                                     GraphicsWindow.DrawText ( 270  , 30 , m3_9) 
+                                                                     workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                                                                     Controls.SetSize ( workingoutblock , 150 , 440)
+                                                                      Controls.ButtonClicked = buttonclicked_m3_9
+                                                                                                        EndSub
+               
+                        Sub buttonclicked_m3_9 
+                          
+                 Sound.PlayClick()         
+                 answer_m =   Controls.GetTextBoxText (textbox_m1)   
+                 array [9] = answer_m 
+                       If answer_m = m3_9a Then 
+                          score = score + 1  
+                              EndIf
+                 
+                     GraphicsWindow.Clear () 
+                 
+                  button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                  textbox_m1 = Controls.AddTextBox (250 , 280)   
+                  Controls.SetSize (textbox_m1, 80  ,45) 
+                  Controls.SetSize (button_m1 , 80 , 80) 
+                  GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                  GraphicsWindow.DrawText ( 270  , 30 , m3_10)
+                  workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                  Controls.SetSize ( workingoutblock , 150 , 440)
+                  
+                  Controls.ButtonClicked = buttonclicked_m3_10 
+                  
+                                    EndSub 
+                                    
+                                                                                                     sub buttonclicked_m3_10 
+         
+                                                                                                         Sound.PlayClick()     
+                                                                                  answer_m =   Controls.GetTextBoxText (textbox_m1)   
+                                                                                  array [10] = answer_m
+                                                                                                      If answer_m = m3_10a Then 
+                                                                                                          score = score + 1  
+                                                                                                                 EndIf
+           percentage = score / 10 * 100  
+                     
+                if  percentage > 49  Then  
+                  congrad = 1 
+                Else 
+                  congrad = 0
+               EndIf 
+        
+            
+           GraphicsWindow.Clear()
+     
+           If congrad = 0 Then 
+           GraphicsWindow.DrawText (180 , 10 , "OoooOps!  ")
+           GraphicsWindow.DrawText (230 , 30 , "Your percentage") 
+           GraphicsWindow.DrawText (240 , 50 , percentage)
+           
+         ElseIf congrad = 1 then 
+           
+           GraphicsWindow.DrawText (180 , 10 , "CONGRADULATIONS!")
+           GraphicsWindow.DrawText (230 , 30 , "Your percentage") 
+           GraphicsWindow.DrawText (240 , 50 , percentage) 
+           
+           EndIf
+           
+           GraphicsWindow.DrawText (10 , 140 , array [1])
+           GraphicsWindow.DrawText (10 , 160 , array [2])
+           GraphicsWindow.DrawText (10 , 180 , array [3]) 
+           GraphicsWindow.DrawText (10 , 200 , array [4]) 
+           GraphicsWindow.DrawText (10 , 220 , array [5]) 
+           GraphicsWindow.DrawText (10 , 240 , array [6]) 
+           GraphicsWindow.DrawText (10 , 260 , array [7]) 
+           GraphicsWindow.DrawText (10 , 280 , array [8]) 
+           GraphicsWindow.DrawText (10 , 300 , array [9]) 
+           GraphicsWindow.DrawText (10 , 320 , array [10]) 
+           GraphicsWindow.DrawText (10 , 100 , "Your Answers:") 
+           
+           GraphicsWindow.DrawText (200 , 100 , "The Questions:")
+           GraphicsWindow.DrawText (200 , 140 , m3_1 ) 
+           GraphicsWindow.DrawText (200 , 160 , m3_2 ) 
+           GraphicsWindow.DrawText (200 , 180 , m3_3 ) 
+           GraphicsWindow.DrawText (200 , 200 , m3_4 ) 
+           GraphicsWindow.DrawText (200 , 220,  m3_5 ) 
+           GraphicsWindow.DrawText (200 , 240 , m3_6) 
+           GraphicsWindow.DrawText (200 , 260 , m3_7) 
+           GraphicsWindow.DrawText (200 , 280 , m3_8) 
+           GraphicsWindow.DrawText (200 , 300 , m3_9) 
+           GraphicsWindow.DrawText (200  ,320 , m3_10) 
+           
+           GraphicsWindow.DrawText (380 , 100 , "Memorandum Answers:") 
+           GraphicsWindow.DrawText (380 , 140 , m3_1a)      
+           GraphicsWindow.DrawText (380 , 160 , m3_2a) 
+           GraphicsWindow.DrawText (380 , 180 , m3_3a) 
+           GraphicsWindow.DrawText (380 , 200 , m3_4a) 
+           GraphicsWindow.DrawText (380 , 220 , m3_5a) 
+           GraphicsWindow.DrawText (380 , 240 , m3_6a) 
+           GraphicsWindow.DrawText (380 , 260 , m3_7a) 
+           GraphicsWindow.DrawText (380 , 280 , m3_8a) 
+           GraphicsWindow.DrawText (380 , 300 , m3_9a) 
+           GraphicsWindow.DrawText (380 , 320 , m3_10a)
+          
+          Controls.AddButton ( "Done" , 550 , 370)
+          Controls.ButtonClicked = exitbuttonm3 
+                      
+                     endsub             
+                     
+             Sub exitbuttonm3 
+               Sound.PlayClickAndWait()
+               Program.End() 
+             EndSub 
+             
+             Sub exitbuttonm4 
+               Sound.PlayClickAndWait()
+               Program.End() 
+             EndSub     
+            
+          
+          
+              
+              Sub buttonclicked_d 
+                
+                
+                  
+              
+              
+                 Sound.PlayClick()
+                 Controls.HideControl (button_m) 
+                 Controls.HideControl (button_d)  
+                 GraphicsWindow.Clear() 
+                
+                 
+                 button_Dm1 =                           Controls.AddButton ("test 1" , 10 , 10  ) 
+                 button_Dm2 =                           Controls.AddButton ("test 2" , 10 , 180 ) 
+                 button_Dm3 =                           Controls.AddButton ("test 3" , 10 , 345 )
+               
+                 Controls.SetSize (button_Dm1 , 90 , 90 ) 
+                 Controls.SetSize (button_Dm2 , 90 , 90 ) 
+                 Controls.SetSize (button_Dm3 , 90 , 90 )  
+                  
+                 
+                 GraphicsWindow.DrawText (110 , 10 ,  "Simple Division Sums") 
+                 GraphicsWindow.DrawText (110 , 180 , "Moderate Division Sums") 
+                 GraphicsWindow.DrawText (110 , 345 , "Advanced Division sums") 
+                 
+                 Controls.ButtonClicked = buttonclicked_D_m0
+                 EndSub
+                 
+                               
+             
+                 
+                 Sub buttonclicked_D_m0
+                 If Controls.LastClickedButton = button_Dm1 then 
+                 Controls.ButtonClicked = buttonclicked_D_M1
+                 elseif Controls.LastClickedButton = button_Dm2 then 
+                 Controls.ButtonClicked = buttonclicked_D_M2 
+                 elseif Controls.LastClickedButton = button_Dm3 then 
+                 Controls.ButtonClicked = buttonclicked_D_M3
+                 endif 
+                 endsub
+                 
+                Sub buttonclicked_D_M1  
+         
+         D1_1  = "8  % 4" 
+         D1_2  = "12 % 2"
+         D1_3  = "9  % 3"
+         D1_4  = "12 % 3"
+         D1_5  = "6  % 3"
+         D1_6  = "10 % 2"
+         D1_7  = "10 % 5"
+         D1_8  = "8  % 4 "
+         D1_9  = "4  % 2 "
+         D1_10 = "12 % 6"
+         
+         D1_1a  = 8 / 4 
+         D1_2a  = 12 / 2 
+         D1_3a  = 9 / 3  
+         D1_4a  = 12 / 3  
+         D1_5a  = 6 / 3  
+         D1_6a  = 10 / 2 
+         D1_7a  = 10 / 5  
+         D1_8a  = 8 / 4 
+         D1_9a  = 4 / 2 
+         D1_10a = 12 / 6 
+                    
+                 Sound.PlayClick()
+                                                                 GraphicsWindow.Clear() 
+                
+                                                button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                textbox_m1 = Controls.AddTextBox (250 , 280) 
+                                                Controls.SetSize (textbox_m1, 80  ,45) 
+                                                Controls.SetSize (button_m1 , 80 , 80) 
+                                                GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                GraphicsWindow.DrawText ( 270  , 30 , D1_1 ) 
+                    workingoutblock =           Controls.AddMultiLineTextBox (470 , 0) 
+                                                Controls.SetSize ( workingoutblock , 150 , 440)  
+                
+                                                   Controls.ButtonClicked = buttonclicked_D1_1 
+                                                                        EndSub 
+                
+               
+              
+            
+                        sub buttonclicked_D1_1
+              
+              Sound.PlayClick()
+              answer_m =   Controls.GetTextBoxText (textbox_m1) 
+              array [1] = answer_m 
+                         If answer_m = D1_1a Then 
+                                score = 1 
+                                  EndIf 
+                                                            
+                                                            
+                     GraphicsWindow.Clear() 
+                
+      button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+      textbox_m1 = Controls.AddTextBox (250 , 280)   
+      Controls.SetSize (textbox_m1, 80  ,45) 
+      Controls.SetSize (button_m1 , 80 , 80) 
+      GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+      GraphicsWindow.DrawText ( 270  , 30 , D1_2 ) 
+      workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+      Controls.SetSize ( workingoutblock , 150 , 440)
+                
+      Controls.ButtonClicked = buttonclicked_D1_2 
+                     EndSub               
+                                          
+                                          
+                                          
+                                                          sub buttonclicked_D1_2
+                                                            
+                                                          Sound.PlayClick()  
+                                                          answer_m =   Controls.GetTextBoxText (textbox_m1)  
+                                                           array [2] = answer_m
+                                                           If answer_m = D1_2a Then 
+                                                              score = score + 1  
+                                                                   EndIf 
+             
+             
+                                                                 GraphicsWindow.Clear() 
+                                                   
+                                                 button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                 textbox_m1 = Controls.AddTextBox (250 , 280)   
+                                                 Controls.SetSize (textbox_m1, 80  ,45) 
+                                                 Controls.SetSize (button_m1 , 80 , 80) 
+                                                 GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                 GraphicsWindow.DrawText ( 270  , 30 , D1_3 ) 
+                                                 workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                                                 Controls.SetSize ( workingoutblock , 150 , 440)
+                                                 
+                                                 Controls.ButtonClicked = buttonclicked_D1_3 
+                                                                        EndSub
+              
+              
+              
+              sub buttonclicked_D1_3 
+           
+Sound.PlayClick()           
+answer_m =   Controls.GetTextBoxText (textbox_m1)
+              array [3] = answer_m   
+              If answer_m = D1_3a Then 
+                  score = score + 1  
+                       EndIf  
+              
+              
+          GraphicsWindow.Clear() 
+                
+          button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+          textbox_m1 = Controls.AddTextBox (250 , 280)   
+          Controls.SetSize (textbox_m1, 80  ,45) 
+          Controls.SetSize (button_m1 , 80 , 80) 
+          GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+          GraphicsWindow.DrawText ( 270  , 30 , D1_4 ) 
+          workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+          Controls.SetSize ( workingoutblock , 150 , 440)      
+             
+             Controls.ButtonClicked = buttonclicked_D1_4 
+                               EndSub 
+             
+           
+         
+                                                                            Sub buttonclicked_D1_4 
+                                                                              
+                                                               Sound.PlayClick()               
+                                                               answer_m =   Controls.GetTextBoxText (textbox_m1)
+                                                                          array [4] = answer_m
+                                                                          If answer_m = D1_4a Then 
+                                                                               score = score + 1  
+                                                                                    EndIf
+                 
+                                                                          GraphicsWindow.Clear() 
+                
+                                                                   button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                                   textbox_m1 = Controls.AddTextBox (250 , 280)   
+                                                                   Controls.SetSize (textbox_m1, 80  ,45) 
+                                                                   Controls.SetSize (button_m1 , 80 , 80) 
+                                                                   GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                                   GraphicsWindow.DrawText ( 270  , 30 , D1_5 ) 
+                                                                   workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                                                                   Controls.SetSize ( workingoutblock , 150 , 440)
+                                                                   
+                                                                   Controls.ButtonClicked = buttonclicked_D1_5 
+                                                                                     EndSub 
+             
+             
+         
+         Sub buttonclicked_D1_5
+           
+         Sound.PlayClick()      
+         answer_m =   Controls.GetTextBoxText (textbox_m1) 
+         array [5] = answer_m    
+              If answer_m = D1_5a Then 
+                 score = score + 1  
+                      EndIf
+             
+            GraphicsWindow.Clear() 
+                
+   button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+   textbox_m1 = Controls.AddTextBox (250 , 280)   
+   Controls.SetSize (textbox_m1, 80  ,45) 
+   Controls.SetSize (button_m1 , 80 , 80) 
+   GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+   GraphicsWindow.DrawText ( 270  , 30 , D1_6 ) 
+   workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+   Controls.SetSize ( workingoutblock , 150 , 440)
+
+    Controls.ButtonClicked = buttonclicked_D1_6
+                    EndSub 
+                
+                
+                
+                                                                                 sub buttonclicked_D1_6
+                                                                                   
+                                                                   Sound.PlayClick()                
+                                                                   answer_m =   Controls.GetTextBoxText (textbox_m1) 
+                                                                   array [6] = answer_m  
+                                                                                If answer_m = D1_6a Then 
+                                                                                   score = score + 1  
+                                                                                        EndIf
+                 
+                                                                                 GraphicsWindow.Clear()
+                 
+                                                                  button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                                  textbox_m1 = Controls.AddTextBox (250 , 280)   
+                                                                  Controls.SetSize (textbox_m1, 80  ,45) 
+                                                                  Controls.SetSize (button_m1 , 80 , 80) 
+                                                                  GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                                  GraphicsWindow.DrawText ( 270  , 30 , D1_7)  
+                                                                  workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                                                                  Controls.SetSize ( workingoutblock , 150 , 440)
+                                                                  
+                                                                 Controls.ButtonClicked = buttonclicked_D1_7
+                                                                                      endsub 
+                                                                                      
+                                                                                      
+                        sub buttonclicked_D1_7 
+
+                 Sound.PlayClick()
+                 answer_m =   Controls.GetTextBoxText (textbox_m1)   
+                 array [7] = answer_m 
+                            If answer_m = D1_7a Then 
+                             score = score + 1  
+                                   EndIf
+                 
+                           GraphicsWindow.Clear()  
+                   
+                button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                textbox_m1 = Controls.AddTextBox (250 , 280)   
+                Controls.SetSize (textbox_m1, 80  ,45) 
+                Controls.SetSize (button_m1 , 80 , 80) 
+                GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                GraphicsWindow.DrawText ( 270  , 30 , D1_8) 
+                workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                Controls.SetSize ( workingoutblock , 150 , 440)
+                
+                
+                Controls.ButtonClicked = buttonclicked_D1_8 
+                                   EndSub 
+                
+                
+                
+                                                                                               Sub buttonclicked_D1_8
+                 
+                                                                                 Sound.PlayClick()
+                                                                                 answer_m =   Controls.GetTextBoxText (textbox_m1)   
+                                                                                 array [8] = answer_m
+                                                                                               If answer_m = D1_8a Then 
+                                                                                                 score = score + 1  
+                                                                                                      EndIf 
+                 
+                                                                                               GraphicsWindow.Clear () 
+                 
+                                                                     button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                                     textbox_m1 = Controls.AddTextBox (250 , 280)   
+                                                                     Controls.SetSize (textbox_m1, 80  ,45) 
+                                                                     Controls.SetSize (button_m1 , 80 , 80) 
+                                                                     GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                                     GraphicsWindow.DrawText ( 270  , 30 , D1_9) 
+                                                                     workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                                                                     Controls.SetSize ( workingoutblock , 150 , 440)
+                                                                      Controls.ButtonClicked = buttonclicked_D1_9
+                                                                                                        EndSub
+               
+                        Sub buttonclicked_D1_9 
+                          
+                 Sound.PlayClick()         
+                 answer_m =   Controls.GetTextBoxText (textbox_m1)   
+                 array [9] = answer_m 
+                       If answer_m = D1_9a Then 
+                          score = score + 1  
+                              EndIf
+                 
+                     GraphicsWindow.Clear () 
+                 
+                  button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                  textbox_m1 = Controls.AddTextBox (250 , 280)   
+                  Controls.SetSize (textbox_m1, 80  ,45) 
+                  Controls.SetSize (button_m1 , 80 , 80) 
+                  GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                  GraphicsWindow.DrawText ( 270  , 30 , D1_10)
+                  workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                  Controls.SetSize ( workingoutblock , 150 , 440)
+                  
+                  Controls.ButtonClicked = buttonclicked_D1_10 
+                  
+                                    EndSub 
+                                    
+                                                                                                     sub buttonclicked_D1_10 
+         
+                                                                                                         Sound.PlayClick()     
+                                                                                  answer_m =   Controls.GetTextBoxText (textbox_m1)   
+                                                                                  array [10] = answer_m
+                                                                                                      If answer_m = D1_10a Then 
+                                                                                                          score = score + 1  
+                                                                                                                 EndIf
+           percentage = score / 10 * 100  
+                     
+                if  percentage > 49  Then  
+                  congrad = 1 
+                Else 
+                  congrad = 0
+               EndIf 
+        
+            
+           GraphicsWindow.Clear()
+     
+           If congrad = 0 Then 
+           GraphicsWindow.DrawText (180 , 10 , "OoooOps!  ")
+           GraphicsWindow.DrawText (230 , 30 , "Your percentage") 
+           GraphicsWindow.DrawText (240 , 50 , percentage)
+           
+         ElseIf congrad = 1 then 
+           
+           GraphicsWindow.DrawText (180 , 10 , "CONGRADULATIONS!")
+           GraphicsWindow.DrawText (230 , 30 , "Your percentage") 
+           GraphicsWindow.DrawText (240 , 50 , percentage) 
+           
+           EndIf
+           
+           GraphicsWindow.DrawText (10 , 140 , array [1])
+           GraphicsWindow.DrawText (10 , 160 , array [2])
+           GraphicsWindow.DrawText (10 , 180 , array [3]) 
+           GraphicsWindow.DrawText (10 , 200 , array [4]) 
+           GraphicsWindow.DrawText (10 , 220 , array [5]) 
+           GraphicsWindow.DrawText (10 , 240 , array [6]) 
+           GraphicsWindow.DrawText (10 , 260 , array [7]) 
+           GraphicsWindow.DrawText (10 , 280 , array [8]) 
+           GraphicsWindow.DrawText (10 , 300 , array [9]) 
+           GraphicsWindow.DrawText (10 , 320 , array [10]) 
+           GraphicsWindow.DrawText (10 , 100 , "Your Answers:") 
+           
+           GraphicsWindow.DrawText (200 , 100 , "The Questions:")
+           GraphicsWindow.DrawText (200 , 140 , D1_1 ) 
+           GraphicsWindow.DrawText (200 , 160 , D1_2 ) 
+           GraphicsWindow.DrawText (200 , 180 , D1_3 ) 
+           GraphicsWindow.DrawText (200 , 200 , D1_4 ) 
+           GraphicsWindow.DrawText (200 , 220,  D1_5 ) 
+           GraphicsWindow.DrawText (200 , 240 , D1_6) 
+           GraphicsWindow.DrawText (200 , 260 , D1_7) 
+           GraphicsWindow.DrawText (200 , 280 , D1_8) 
+           GraphicsWindow.DrawText (200 , 300 , D1_9) 
+           GraphicsWindow.DrawText (200  ,320 , D1_10) 
+           
+           GraphicsWindow.DrawText (380 , 100 , "Memorandum Answers:") 
+           GraphicsWindow.DrawText (380 , 140 , D1_1a)      
+           GraphicsWindow.DrawText (380 , 160 , D1_2a) 
+           GraphicsWindow.DrawText (380 , 180 , D1_3a) 
+           GraphicsWindow.DrawText (380 , 200 , D1_4a) 
+           GraphicsWindow.DrawText (380 , 220 , D1_5a) 
+           GraphicsWindow.DrawText (380 , 240 , D1_6a) 
+           GraphicsWindow.DrawText (380 , 260 , D1_7a) 
+           GraphicsWindow.DrawText (380 , 280 , D1_8a) 
+           GraphicsWindow.DrawText (380 , 300 , D1_9a) 
+           GraphicsWindow.DrawText (380 , 320 , D1_10a)
+          
+          Controls.AddButton ( "Done" , 550 , 370)
+          Controls.ButtonClicked = exitbuttonD1 
+                      
+                     endsub             
+                     
+             Sub exitbuttonD1
+               Sound.PlayClickAndWait()
+               Program.End() 
+             EndSub 
+             
+             Sub buttonclicked_D_m2 
+               
+               
+         D1_1  = "20 % 2" 
+         D1_2  = "28 % 4"
+         D1_3  = "98 % 7"
+         D1_4  = "69 % 3"
+         D1_5  = "64 % 32"
+         D1_6  = "45 % 3"
+         D1_7  = "85 % 5"
+         D1_8  = "75 % 3"
+         D1_9  = "84 % 6"
+         D1_10 = "88 % 4"
+         
+         D1_1a  = 20 / 2 
+         D1_2a  = 28 / 4
+         D1_3a  = 98 / 7 
+         D1_4a  = 69 / 3  
+         D1_5a  = 64 / 32  
+         D1_6a  = 45 / 3 
+         D1_7a  = 85 / 5  
+         D1_8a  = 75 / 3 
+         D1_9a  = 84 / 6
+         D1_10a = 88 / 4  
+                    
+                 Sound.PlayClick()
+                                                                 GraphicsWindow.Clear() 
+                
+                                                button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                textbox_m1 = Controls.AddTextBox (250 , 280) 
+                                                Controls.SetSize (textbox_m1, 80  ,45) 
+                                                Controls.SetSize (button_m1 , 80 , 80) 
+                                                GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                GraphicsWindow.DrawText ( 270  , 30 , D1_1 ) 
+                    workingoutblock =           Controls.AddMultiLineTextBox (470 , 0) 
+                                                Controls.SetSize ( workingoutblock , 150 , 440)  
+                
+                                                   Controls.ButtonClicked = buttonclicked_D2_1 
+                                                                        EndSub 
+                
+               
+              
+            
+                        sub buttonclicked_D2_1
+              
+              Sound.PlayClick()
+              answer_m =   Controls.GetTextBoxText (textbox_m1) 
+              array [1] = answer_m 
+                         If answer_m = D1_1a Then 
+                                score = 1 
+                                  EndIf 
+                                                            
+                                                            
+                     GraphicsWindow.Clear() 
+                
+      button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+      textbox_m1 = Controls.AddTextBox (250 , 280)   
+      Controls.SetSize (textbox_m1, 80  ,45) 
+      Controls.SetSize (button_m1 , 80 , 80) 
+      GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+      GraphicsWindow.DrawText ( 270  , 30 , D1_2 ) 
+      workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+      Controls.SetSize ( workingoutblock , 150 , 440)
+                
+      Controls.ButtonClicked = buttonclicked_D2_2 
+                     EndSub               
+                                          
+                                          
+                                          
+                                                          sub buttonclicked_D2_2
+                                                            
+                                                          Sound.PlayClick()  
+                                                          answer_m =   Controls.GetTextBoxText (textbox_m1)  
+                                                           array [2] = answer_m
+                                                           If answer_m = D1_2a Then 
+                                                              score = score + 1  
+                                                                   EndIf 
+             
+             
+                                                                 GraphicsWindow.Clear() 
+                                                   
+                                                 button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                 textbox_m1 = Controls.AddTextBox (250 , 280)   
+                                                 Controls.SetSize (textbox_m1, 80  ,45) 
+                                                 Controls.SetSize (button_m1 , 80 , 80) 
+                                                 GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                 GraphicsWindow.DrawText ( 270  , 30 , D1_3 ) 
+                                                 workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                                                 Controls.SetSize ( workingoutblock , 150 , 440)
+                                                 
+                                                 Controls.ButtonClicked = buttonclicked_D2_3 
+                                                                        EndSub
+              
+              
+              
+              sub buttonclicked_D2_3 
+           
+Sound.PlayClick()           
+answer_m =   Controls.GetTextBoxText (textbox_m1)
+              array [3] = answer_m   
+              If answer_m = D1_3a Then 
+                  score = score + 1  
+                       EndIf  
+              
+              
+          GraphicsWindow.Clear() 
+                
+          button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+          textbox_m1 = Controls.AddTextBox (250 , 280)   
+          Controls.SetSize (textbox_m1, 80  ,45) 
+          Controls.SetSize (button_m1 , 80 , 80) 
+          GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+          GraphicsWindow.DrawText ( 270  , 30 , D1_4 ) 
+          workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+          Controls.SetSize ( workingoutblock , 150 , 440)      
+             
+             Controls.ButtonClicked = buttonclicked_D2_4 
+                               EndSub 
+             
+           
+         
+                                                                            Sub buttonclicked_D2_4 
+                                                                              
+                                                               Sound.PlayClick()               
+                                                               answer_m =   Controls.GetTextBoxText (textbox_m1)
+                                                                          array [4] = answer_m
+                                                                          If answer_m = D1_4a Then 
+                                                                               score = score + 1  
+                                                                                    EndIf
+                 
+                                                                          GraphicsWindow.Clear() 
+                
+                                                                   button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                                   textbox_m1 = Controls.AddTextBox (250 , 280)   
+                                                                   Controls.SetSize (textbox_m1, 80  ,45) 
+                                                                   Controls.SetSize (button_m1 , 80 , 80) 
+                                                                   GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                                   GraphicsWindow.DrawText ( 270  , 30 , D1_5 ) 
+                                                                   workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                                                                   Controls.SetSize ( workingoutblock , 150 , 440)
+                                                                   
+                                                                   Controls.ButtonClicked = buttonclicked_D2_5 
+                                                                                     EndSub 
+             
+             
+         
+         Sub buttonclicked_D2_5
+           
+         Sound.PlayClick()      
+         answer_m =   Controls.GetTextBoxText (textbox_m1) 
+         array [5] = answer_m    
+              If answer_m = D1_5a Then 
+                 score = score + 1  
+                      EndIf
+             
+            GraphicsWindow.Clear() 
+                
+   button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+   textbox_m1 = Controls.AddTextBox (250 , 280)   
+   Controls.SetSize (textbox_m1, 80  ,45) 
+   Controls.SetSize (button_m1 , 80 , 80) 
+   GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+   GraphicsWindow.DrawText ( 270  , 30 , D1_6 ) 
+   workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+   Controls.SetSize ( workingoutblock , 150 , 440)
+
+    Controls.ButtonClicked = buttonclicked_D2_6
+                    EndSub 
+                
+                
+                
+                                                                                 sub buttonclicked_D2_6
+                                                                                   
+                                                                   Sound.PlayClick()                
+                                                                   answer_m =   Controls.GetTextBoxText (textbox_m1) 
+                                                                   array [6] = answer_m  
+                                                                                If answer_m = D1_6a Then 
+                                                                                   score = score + 1  
+                                                                                        EndIf
+                 
+                                                                                 GraphicsWindow.Clear()
+                 
+                                                                  button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                                  textbox_m1 = Controls.AddTextBox (250 , 280)   
+                                                                  Controls.SetSize (textbox_m1, 80  ,45) 
+                                                                  Controls.SetSize (button_m1 , 80 , 80) 
+                                                                  GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                                  GraphicsWindow.DrawText ( 270  , 30 , D1_7)  
+                                                                  workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                                                                  Controls.SetSize ( workingoutblock , 150 , 440)
+                                                                  
+                                                                 Controls.ButtonClicked = buttonclicked_D2_7
+                                                                                      endsub 
+                                                                                      
+                                                                                      
+                        sub buttonclicked_D2_7 
+
+                 Sound.PlayClick()
+                 answer_m =   Controls.GetTextBoxText (textbox_m1)   
+                 array [7] = answer_m 
+                            If answer_m = D1_7a Then 
+                             score = score + 1  
+                                   EndIf
+                 
+                           GraphicsWindow.Clear()  
+                   
+                button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                textbox_m1 = Controls.AddTextBox (250 , 280)   
+                Controls.SetSize (textbox_m1, 80  ,45) 
+                Controls.SetSize (button_m1 , 80 , 80) 
+                GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                GraphicsWindow.DrawText ( 270  , 30 , D1_8) 
+                workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                Controls.SetSize ( workingoutblock , 150 , 440)
+                
+                
+                Controls.ButtonClicked = buttonclicked_D2_8 
+                                   EndSub 
+                
+                
+                
+                                                                                               Sub buttonclicked_D2_8
+                 
+                                                                                 Sound.PlayClick()
+                                                                                 answer_m =   Controls.GetTextBoxText (textbox_m1)   
+                                                                                 array [8] = answer_m
+                                                                                               If answer_m = D1_8a Then 
+                                                                                                 score = score + 1  
+                                                                                                      EndIf 
+                 
+                                                                                               GraphicsWindow.Clear () 
+                 
+                                                                     button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                                     textbox_m1 = Controls.AddTextBox (250 , 280)   
+                                                                     Controls.SetSize (textbox_m1, 80  ,45) 
+                                                                     Controls.SetSize (button_m1 , 80 , 80) 
+                                                                     GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                                     GraphicsWindow.DrawText ( 270  , 30 , D1_9) 
+                                                                     workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                                                                     Controls.SetSize ( workingoutblock , 150 , 440)
+                                                                      Controls.ButtonClicked = buttonclicked_D2_9
+                                                                                                        EndSub
+               
+                        Sub buttonclicked_D2_9 
+                          
+                 Sound.PlayClick()         
+                 answer_m =   Controls.GetTextBoxText (textbox_m1)   
+                 array [9] = answer_m 
+                       If answer_m = D1_9a Then 
+                          score = score + 1  
+                              EndIf
+                 
+                     GraphicsWindow.Clear () 
+                 
+                  button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                  textbox_m1 = Controls.AddTextBox (250 , 280)   
+                  Controls.SetSize (textbox_m1, 80  ,45) 
+                  Controls.SetSize (button_m1 , 80 , 80) 
+                  GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                  GraphicsWindow.DrawText ( 270  , 30 , D1_10)
+                  workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                  Controls.SetSize ( workingoutblock , 150 , 440)
+                  
+                  Controls.ButtonClicked = buttonclicked_D2_10 
+                  
+                                    EndSub 
+                                    
+                                                                                                     sub buttonclicked_D2_10 
+         
+                                                                                                         Sound.PlayClick()     
+                                                                                  answer_m =   Controls.GetTextBoxText (textbox_m1)   
+                                                                                  array [10] = answer_m
+                                                                                                      If answer_m = D1_10a Then 
+                                                                                                          score = score + 1  
+                                                                                                                 EndIf
+           percentage = score / 10 * 100  
+                     
+                if  percentage > 49  Then  
+                  congrad = 1 
+                Else 
+                  congrad = 0
+               EndIf 
+        
+            
+           GraphicsWindow.Clear()
+     
+           If congrad = 0 Then 
+           GraphicsWindow.DrawText (180 , 10 , "OoooOps!  ")
+           GraphicsWindow.DrawText (230 , 30 , "Your percentage") 
+           GraphicsWindow.DrawText (240 , 50 , percentage)
+           
+         ElseIf congrad = 1 then 
+           
+           GraphicsWindow.DrawText (180 , 10 , "CONGRADULATIONS!")
+           GraphicsWindow.DrawText (230 , 30 , "Your percentage") 
+           GraphicsWindow.DrawText (240 , 50 , percentage) 
+           
+           EndIf
+           
+           GraphicsWindow.DrawText (10 , 140 , array [1])
+           GraphicsWindow.DrawText (10 , 160 , array [2])
+           GraphicsWindow.DrawText (10 , 180 , array [3]) 
+           GraphicsWindow.DrawText (10 , 200 , array [4]) 
+           GraphicsWindow.DrawText (10 , 220 , array [5]) 
+           GraphicsWindow.DrawText (10 , 240 , array [6]) 
+           GraphicsWindow.DrawText (10 , 260 , array [7]) 
+           GraphicsWindow.DrawText (10 , 280 , array [8]) 
+           GraphicsWindow.DrawText (10 , 300 , array [9]) 
+           GraphicsWindow.DrawText (10 , 320 , array [10]) 
+           GraphicsWindow.DrawText (10 , 100 , "Your Answers:") 
+           
+           GraphicsWindow.DrawText (200 , 100 , "The Questions:")
+           GraphicsWindow.DrawText (200 , 140 , D1_1 ) 
+           GraphicsWindow.DrawText (200 , 160 , D1_2 ) 
+           GraphicsWindow.DrawText (200 , 180 , D1_3 ) 
+           GraphicsWindow.DrawText (200 , 200 , D1_4 ) 
+           GraphicsWindow.DrawText (200 , 220,  D1_5 ) 
+           GraphicsWindow.DrawText (200 , 240 , D1_6) 
+           GraphicsWindow.DrawText (200 , 260 , D1_7) 
+           GraphicsWindow.DrawText (200 , 280 , D1_8) 
+           GraphicsWindow.DrawText (200 , 300 , D1_9) 
+           GraphicsWindow.DrawText (200  ,320 , D1_10) 
+           
+           GraphicsWindow.DrawText (380 , 100 , "Memorandum Answers:") 
+           GraphicsWindow.DrawText (380 , 140 , D1_1a)      
+           GraphicsWindow.DrawText (380 , 160 , D1_2a) 
+           GraphicsWindow.DrawText (380 , 180 , D1_3a) 
+           GraphicsWindow.DrawText (380 , 200 , D1_4a) 
+           GraphicsWindow.DrawText (380 , 220 , D1_5a) 
+           GraphicsWindow.DrawText (380 , 240 , D1_6a) 
+           GraphicsWindow.DrawText (380 , 260 , D1_7a) 
+           GraphicsWindow.DrawText (380 , 280 , D1_8a) 
+           GraphicsWindow.DrawText (380 , 300 , D1_9a) 
+           GraphicsWindow.DrawText (380 , 320 , D1_10a)
+          
+          Controls.AddButton ( "Done" , 550 , 370)
+          Controls.ButtonClicked = exitbuttonD2 
+          
+          EndSub 
+          
+        sub exitbuttonD2
+          Program.End() 
+          EndSub 
+          
+               
+            
+            Sub buttonclicked_D_m3
+              
+         D1_1  = "825   % 33" 
+         D1_2  = "275   % 11"
+         D1_3  = "363   % 33"
+         D1_4  = "369   % 9"
+         D1_5  = "132   % 4"
+         D1_6  = "176   % 2"
+         D1_7  = "222   % 2"
+         D1_8  = "792   % 66"
+         D1_9  = "1386  % 22"
+         D1_10 = "14528 % 454"
+         
+         D1_1a  = 825   / 33  
+         D1_2a  = 275   / 11   
+         D1_3a  = 363   / 33 
+         D1_4a  = 369   / 9  
+         D1_5a  = 132   / 4  
+         D1_6a  = 176   / 2 
+         D1_7a  = 222   / 2 
+         D1_8a  = 792   / 66
+         D1_9a  = 1386  / 22
+         D1_10a = 14528 / 454  
+                    
+                 Sound.PlayClick()
+                                                                 GraphicsWindow.Clear() 
+                
+                                                button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                textbox_m1 = Controls.AddTextBox (250 , 280) 
+                                                Controls.SetSize (textbox_m1, 80  ,45) 
+                                                Controls.SetSize (button_m1 , 80 , 80) 
+                                                GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                GraphicsWindow.DrawText ( 270  , 30 , D1_1 ) 
+                    workingoutblock =           Controls.AddMultiLineTextBox (470 , 0) 
+                                                Controls.SetSize ( workingoutblock , 150 , 440)  
+                
+                                                   Controls.ButtonClicked = buttonclicked_D3_1 
+                                                                        EndSub 
+                
+               
+              
+            
+                        sub buttonclicked_D3_1
+              
+              Sound.PlayClick()
+              answer_m =   Controls.GetTextBoxText (textbox_m1) 
+              array [1] = answer_m 
+                         If answer_m = D1_1a Then 
+                                score = 1 
+                                  EndIf 
+                                                            
+                                                            
+                     GraphicsWindow.Clear() 
+                
+      button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+      textbox_m1 = Controls.AddTextBox (250 , 280)   
+      Controls.SetSize (textbox_m1, 80  ,45) 
+      Controls.SetSize (button_m1 , 80 , 80) 
+      GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+      GraphicsWindow.DrawText ( 270  , 30 , D1_2 ) 
+      workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+      Controls.SetSize ( workingoutblock , 150 , 440)
+                
+      Controls.ButtonClicked = buttonclicked_D3_2 
+                     EndSub               
+                                          
+                                          
+                                          
+                                                          sub buttonclicked_D3_2
+                                                            
+                                                          Sound.PlayClick()  
+                                                          answer_m =   Controls.GetTextBoxText (textbox_m1)  
+                                                           array [2] = answer_m
+                                                           If answer_m = D1_2a Then 
+                                                              score = score + 1  
+                                                                   EndIf 
+             
+             
+                                                                 GraphicsWindow.Clear() 
+                                                   
+                                                 button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                 textbox_m1 = Controls.AddTextBox (250 , 280)   
+                                                 Controls.SetSize (textbox_m1, 80  ,45) 
+                                                 Controls.SetSize (button_m1 , 80 , 80) 
+                                                 GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                 GraphicsWindow.DrawText ( 270  , 30 , D1_3 ) 
+                                                 workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                                                 Controls.SetSize ( workingoutblock , 150 , 440)
+                                                 
+                                                 Controls.ButtonClicked = buttonclicked_D3_3 
+                                                                        EndSub
+              
+              
+              
+              sub buttonclicked_D3_3 
+           
+Sound.PlayClick()           
+answer_m =   Controls.GetTextBoxText (textbox_m1)
+              array [3] = answer_m   
+              If answer_m = D1_3a Then 
+                  score = score + 1  
+                       EndIf  
+              
+              
+          GraphicsWindow.Clear() 
+                
+          button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+          textbox_m1 = Controls.AddTextBox (250 , 280)   
+          Controls.SetSize (textbox_m1, 80  ,45) 
+          Controls.SetSize (button_m1 , 80 , 80) 
+          GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+          GraphicsWindow.DrawText ( 270  , 30 , D1_4 ) 
+          workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+          Controls.SetSize ( workingoutblock , 150 , 440)      
+             
+             Controls.ButtonClicked = buttonclicked_D3_4 
+                               EndSub 
+             
+           
+         
+                                                                            Sub buttonclicked_D3_4 
+                                                                              
+                                                               Sound.PlayClick()               
+                                                               answer_m =   Controls.GetTextBoxText (textbox_m1)
+                                                                          array [4] = answer_m
+                                                                          If answer_m = D1_4a Then 
+                                                                               score = score + 1  
+                                                                                    EndIf
+                 
+                                                                          GraphicsWindow.Clear() 
+                
+                                                                   button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                                   textbox_m1 = Controls.AddTextBox (250 , 280)   
+                                                                   Controls.SetSize (textbox_m1, 80  ,45) 
+                                                                   Controls.SetSize (button_m1 , 80 , 80) 
+                                                                   GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                                   GraphicsWindow.DrawText ( 270  , 30 , D1_5 ) 
+                                                                   workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                                                                   Controls.SetSize ( workingoutblock , 150 , 440)
+                                                                   
+                                                                   Controls.ButtonClicked = buttonclicked_D3_5 
+                                                                                     EndSub 
+             
+             
+         
+         Sub buttonclicked_D3_5
+           
+         Sound.PlayClick()      
+         answer_m =   Controls.GetTextBoxText (textbox_m1) 
+         array [5] = answer_m    
+              If answer_m = D1_5a Then 
+                 score = score + 1  
+                      EndIf
+             
+            GraphicsWindow.Clear() 
+                
+   button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+   textbox_m1 = Controls.AddTextBox (250 , 280)   
+   Controls.SetSize (textbox_m1, 80  ,45) 
+   Controls.SetSize (button_m1 , 80 , 80) 
+   GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+   GraphicsWindow.DrawText ( 270  , 30 , D1_6 ) 
+   workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+   Controls.SetSize ( workingoutblock , 150 , 440)
+
+    Controls.ButtonClicked = buttonclicked_D3_6
+                    EndSub 
+                
+                
+                
+                                                                                 sub buttonclicked_D3_6
+                                                                                   
+                                                                   Sound.PlayClick()                
+                                                                   answer_m =   Controls.GetTextBoxText (textbox_m1) 
+                                                                   array [6] = answer_m  
+                                                                                If answer_m = D1_6a Then 
+                                                                                   score = score + 1  
+                                                                                        EndIf
+                 
+                                                                                 GraphicsWindow.Clear()
+                 
+                                                                  button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                                  textbox_m1 = Controls.AddTextBox (250 , 280)   
+                                                                  Controls.SetSize (textbox_m1, 80  ,45) 
+                                                                  Controls.SetSize (button_m1 , 80 , 80) 
+                                                                  GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                                  GraphicsWindow.DrawText ( 270  , 30 , D1_7)  
+                                                                  workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                                                                  Controls.SetSize ( workingoutblock , 150 , 440)
+                                                                  
+                                                                 Controls.ButtonClicked = buttonclicked_D3_7
+                                                                                      endsub 
+                                                                                      
+                                                                                      
+                        sub buttonclicked_D3_7 
+
+                 Sound.PlayClick()
+                 answer_m =   Controls.GetTextBoxText (textbox_m1)   
+                 array [7] = answer_m 
+                            If answer_m = D1_7a Then 
+                             score = score + 1  
+                                   EndIf
+                 
+                           GraphicsWindow.Clear()  
+                   
+                button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                textbox_m1 = Controls.AddTextBox (250 , 280)   
+                Controls.SetSize (textbox_m1, 80  ,45) 
+                Controls.SetSize (button_m1 , 80 , 80) 
+                GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                GraphicsWindow.DrawText ( 270  , 30 , D1_8) 
+                workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                Controls.SetSize ( workingoutblock , 150 , 440)
+                
+                
+                Controls.ButtonClicked = buttonclicked_D3_8 
+                                   EndSub 
+                
+                
+                
+                                                                                               Sub buttonclicked_D3_8
+                 
+                                                                                 Sound.PlayClick()
+                                                                                 answer_m =   Controls.GetTextBoxText (textbox_m1)   
+                                                                                 array [8] = answer_m
+                                                                                               If answer_m = D1_8a Then 
+                                                                                                 score = score + 1  
+                                                                                                      EndIf 
+                 
+                                                                                               GraphicsWindow.Clear () 
+                 
+                                                                     button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                                                                     textbox_m1 = Controls.AddTextBox (250 , 280)   
+                                                                     Controls.SetSize (textbox_m1, 80  ,45) 
+                                                                     Controls.SetSize (button_m1 , 80 , 80) 
+                                                                     GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                                                                     GraphicsWindow.DrawText ( 270  , 30 , D1_9) 
+                                                                     workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                                                                     Controls.SetSize ( workingoutblock , 150 , 440)
+                                                                      Controls.ButtonClicked = buttonclicked_D3_9
+                                                                                                        EndSub
+               
+                        Sub buttonclicked_D3_9 
+                          
+                 Sound.PlayClick()         
+                 answer_m =   Controls.GetTextBoxText (textbox_m1)   
+                 array [9] = answer_m 
+                       If answer_m = D1_9a Then 
+                          score = score + 1  
+                              EndIf
+                 
+                     GraphicsWindow.Clear () 
+                 
+                  button_m1  = Controls.AddButton  ("next" , 250 , 350) 
+                  textbox_m1 = Controls.AddTextBox (250 , 280)   
+                  Controls.SetSize (textbox_m1, 80  ,45) 
+                  Controls.SetSize (button_m1 , 80 , 80) 
+                  GraphicsWindow.DrawText ( 200  , 10 , "Answer the following:") 
+                  GraphicsWindow.DrawText ( 270  , 30 , D1_10)
+                  workingoutblock = Controls.AddMultiLineTextBox (470 , 0) 
+                  Controls.SetSize ( workingoutblock , 150 , 440)
+                  
+                  Controls.ButtonClicked = buttonclicked_D3_10 
+                  
+                                    EndSub 
+                                    
+                                                                                                     sub buttonclicked_D3_10 
+         
+                                                                                                         Sound.PlayClick()     
+                                                                                  answer_m =   Controls.GetTextBoxText (textbox_m1)   
+                                                                                  array [10] = answer_m
+                                                                                                      If answer_m = D1_10a Then 
+                                                                                                          score = score + 1  
+                                                                                                                 EndIf
+           percentage = score / 10 * 100  
+                     
+                if  percentage > 49  Then  
+                  congrad = 1 
+                Else 
+                  congrad = 0
+               EndIf 
+        
+            
+           GraphicsWindow.Clear()
+     
+           If congrad = 0 Then 
+           GraphicsWindow.DrawText (180 , 10 , "OoooOps!  ")
+           GraphicsWindow.DrawText (230 , 30 , "Your percentage") 
+           GraphicsWindow.DrawText (240 , 50 , percentage)
+           
+         ElseIf congrad = 1 then 
+           
+           GraphicsWindow.DrawText (180 , 10 , "CONGRADULATIONS!")
+           GraphicsWindow.DrawText (230 , 30 , "Your percentage") 
+           GraphicsWindow.DrawText (240 , 50 , percentage) 
+           
+           EndIf
+           
+           GraphicsWindow.DrawText (10 , 140 , array [1])
+           GraphicsWindow.DrawText (10 , 160 , array [2])
+           GraphicsWindow.DrawText (10 , 180 , array [3]) 
+           GraphicsWindow.DrawText (10 , 200 , array [4]) 
+           GraphicsWindow.DrawText (10 , 220 , array [5]) 
+           GraphicsWindow.DrawText (10 , 240 , array [6]) 
+           GraphicsWindow.DrawText (10 , 260 , array [7]) 
+           GraphicsWindow.DrawText (10 , 280 , array [8]) 
+           GraphicsWindow.DrawText (10 , 300 , array [9]) 
+           GraphicsWindow.DrawText (10 , 320 , array [10]) 
+           GraphicsWindow.DrawText (10 , 100 , "Your Answers:") 
+           
+           GraphicsWindow.DrawText (200 , 100 , "The Questions:")
+           GraphicsWindow.DrawText (200 , 140 , D1_1 ) 
+           GraphicsWindow.DrawText (200 , 160 , D1_2 ) 
+           GraphicsWindow.DrawText (200 , 180 , D1_3 ) 
+           GraphicsWindow.DrawText (200 , 200 , D1_4 ) 
+           GraphicsWindow.DrawText (200 , 220,  D1_5 ) 
+           GraphicsWindow.DrawText (200 , 240 , D1_6) 
+           GraphicsWindow.DrawText (200 , 260 , D1_7) 
+           GraphicsWindow.DrawText (200 , 280 , D1_8) 
+           GraphicsWindow.DrawText (200 , 300 , D1_9) 
+           GraphicsWindow.DrawText (200  ,320 , D1_10) 
+           
+           GraphicsWindow.DrawText (380 , 100 , "Memorandum Answers:") 
+           GraphicsWindow.DrawText (380 , 140 , D1_1a)      
+           GraphicsWindow.DrawText (380 , 160 , D1_2a) 
+           GraphicsWindow.DrawText (380 , 180 , D1_3a) 
+           GraphicsWindow.DrawText (380 , 200 , D1_4a) 
+           GraphicsWindow.DrawText (380 , 220 , D1_5a) 
+           GraphicsWindow.DrawText (380 , 240 , D1_6a) 
+           GraphicsWindow.DrawText (380 , 260 , D1_7a) 
+           GraphicsWindow.DrawText (380 , 280 , D1_8a) 
+           GraphicsWindow.DrawText (380 , 300 , D1_9a) 
+           GraphicsWindow.DrawText (380 , 320 , D1_10a)
+          
+          Controls.AddButton ( "Done" , 550 , 370)
+          Controls.ButtonClicked = exitbuttonD3 
+              
+             EndSub 
+             
+             Sub exitbuttonD3 
+               
+             Sound.PlayClickAndWait()
+             Program.End()
+             
+            
+             EndSub 
+                
+               
+   Sub mousemovedmainmenu
+
+  Mousex = GraphicsWindow.MouseX 
+  mousey = GraphicsWindow.MouseY
+  
+  
+  mousenewposyb = Mousey + 0.01
+  mousenewposyt = mousey - 2000.01
+  mousenewposxr = Mousex + 0.01
+  mousenewposxl = Mousex - 2000.01
+  
+  
+  
+  Shapes.Animate ( lineyb , mousex , mousenewposyb , 0)
+  Shapes.Animate ( lineyt , mousex , mousenewposyt , 0) 
+  Shapes.Animate ( liner  , mousenewposxr , mousey , 0) 
+  Shapes.Animate ( linel  , mousenewposxl , mousey  , 0)
+ 
+  EndSub 
+ 
+               
